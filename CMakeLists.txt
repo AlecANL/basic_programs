@@ -3,4 +3,4 @@ project(basic_programs)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(basic_programs main.cpp calculator.cpp menu.cpp menuHandler.cpp)
+add_executable(basic_programs main.cpp calculator.cpp menu.cpp menuHandler.cpp even_number.cpp)
