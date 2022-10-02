@@ -1,6 +1,18 @@
 #include <iostream>
+using namespace std;
+
+void mainMenu();
+void mainMenuHandler(int option);
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    int option;
+    mainMenu();
+    cin>>option;
+//    system("cls");
+    mainMenuHandler(option);
+
+
+
     return 0;
 }
