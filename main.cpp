@@ -6,6 +6,8 @@ void mainMenuHandler(int option);
 
 
 int main() {
+    cout<<"Example"<<char(10)<<endl;
+
     int option;
     mainMenu();
     cin>>option;
@@ -20,6 +22,7 @@ int main() {
 
 //    system("cls");
     mainMenuHandler(option);
+
 
 
 

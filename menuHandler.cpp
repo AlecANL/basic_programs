@@ -9,6 +9,9 @@ void measurementConverter();
 void palindromeChecked();
 void romeNumberConverter();
 void binaryNumberConverter();
+void multiplyTableGenerator();
+void multiplyListGenerator();
+void hypotenuseCalculator();
 
 void mainMenuHandler(int option) {
     switch (option) {
@@ -27,8 +30,17 @@ void mainMenuHandler(int option) {
         case 5:
             romeNumberConverter();
             break;
+        case 8:
+            multiplyTableGenerator();
+            break;
+        case 9:
+            multiplyListGenerator();
+            break;
         case 11:
             binaryNumberConverter();
+            break;
+        case 16:
+            hypotenuseCalculator();
             break;
         default:
             cout<<"Opción invalida. Por favor vuelve a intentarlo"<<endl;
