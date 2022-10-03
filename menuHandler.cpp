@@ -7,6 +7,8 @@ void calculator();
 void isEveNumber();
 void measurementConverter();
 void palindromeChecked();
+void romeNumberConverter();
+void binaryNumberConverter();
 
 void mainMenuHandler(int option) {
     switch (option) {
@@ -21,6 +23,12 @@ void mainMenuHandler(int option) {
             break;
         case 4:
             palindromeChecked();
+            break;
+        case 5:
+            romeNumberConverter();
+            break;
+        case 11:
+            binaryNumberConverter();
             break;
         default:
             cout<<"Opción invalida. Por favor vuelve a intentarlo"<<endl;
