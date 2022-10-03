@@ -32,4 +32,19 @@ void calculatorMenu() {
     cout<<"     4. Multiplicar"<<endl;
     cout<<"     5. regresar al menu principal"<<endl;
     cout<<"============================================================"<<endl;
+    cout<<"ingresa tu opcion: ";
+
+}
+
+void measurementConverterMenu() {
+    cout<<"============================================================"<<endl;
+    cout<<"     1. kilometros -> millas"<<endl;
+    cout<<"     2. millas -> kilometros"<<endl;
+    cout<<"     3. metros -> pulgadas"<<endl;
+    cout<<"     4. pulgadas -> metros"<<endl;
+    cout<<"     5. libras -> kilos"<<endl;
+    cout<<"     6. kilos -> libras"<<endl;
+    cout<<"     0. regresar al menu principal"<<endl;
+    cout<<"============================================================"<<endl;
+    cout<<"ingresa tu opcion: ";
 }

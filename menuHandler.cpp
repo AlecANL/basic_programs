@@ -5,6 +5,7 @@ void mainMenu();
 
 void calculator();
 void isEveNumber();
+void measurementConverter();
 
 void mainMenuHandler(int option) {
     switch (option) {
@@ -13,6 +14,9 @@ void mainMenuHandler(int option) {
             break;
         case 2:
             isEveNumber();
+            break;
+        case 3:
+            measurementConverter();
             break;
         default:
             cout<<"Opción invalida. Por favor vuelve a intentarlo"<<endl;

@@ -9,6 +9,15 @@ int main() {
     int option;
     mainMenu();
     cin>>option;
+
+    if (cin.fail()) {
+        cin.clear();
+        cin.ignore(INT_MAX, '\n');
+        cout<<"El sistema no soporta caracteres especiales. Por favor vuelve a intentarlo."<<endl;
+        mainMenu();
+        cin>>option;
+    }
+
 //    system("cls");
     mainMenuHandler(option);
 
