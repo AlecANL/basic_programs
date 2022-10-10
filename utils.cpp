@@ -1,6 +1,6 @@
 #include <iostream>
+#include <sstream>
 using namespace  std;
-
 
 string reverse(string value) {
     string reversed_value;
@@ -10,4 +10,16 @@ string reverse(string value) {
     }
 
     return reversed_value;
+}
+
+int parseInt(char x) {
+    return  x - '0';
+}
+
+
+template <typename T>
+string parseToString(T n) {
+    ostringstream oOStrStream;
+    oOStrStream << n;
+    return oOStrStream.str();
 }

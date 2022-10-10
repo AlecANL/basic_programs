@@ -48,3 +48,18 @@ void measurementConverterMenu() {
     cout<<"============================================================"<<endl;
     cout<<"ingresa tu opcion: ";
 }
+
+void figuresMenu() {
+    cout<<"============================================================"<<endl;
+    cout<<"     1. Ovalo"<<endl;
+    cout<<"     2. Triangulo"<<endl;
+    cout<<"     3. Cuadrado"<<endl;
+    cout<<"     4. Traingulo lado izquierdo"<<endl;
+    cout<<"     5. Rombo"<<endl;
+    cout<<"     6. Trapezoide"<<endl;
+    cout<<"     7. Paralelogramo"<<endl;
+    cout<<"     8. Triangulo 2"<<endl;
+    cout<<"     0. regresar al menu principal"<<endl;
+    cout<<"============================================================"<<endl;
+    cout<<"ingresa tu opcion: ";
+}
