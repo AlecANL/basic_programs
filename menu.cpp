@@ -63,3 +63,20 @@ void figuresMenu() {
     cout<<"============================================================"<<endl;
     cout<<"ingresa tu opcion: ";
 }
+
+void automaticCashDispenseMenu() {
+    cout<<"============================================================"<<endl;
+    cout<<"     1. Retirar dinero"<<endl;
+    cout<<"     2. Ver saldo"<<endl;
+    cout<<"     3. Ver historial de transacciones"<<endl;
+    cout<<"============================================================"<<endl;
+    cout<<"ingresa tu opcion: ";
+}
+
+void automaticCashDispenseSubMenu() {
+    cout<<"============================================================"<<endl;
+    cout<<"     1. Ingresar"<<endl;
+    cout<<"     2. En caso de no tener un usuario. Crealo aqui"<<endl;
+    cout<<"============================================================"<<endl;
+    cout<<"ingresa tu opcion: ";
+}

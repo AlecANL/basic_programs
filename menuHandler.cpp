@@ -16,6 +16,9 @@ void makeFigure();
 void convertDecimalToHexadecimal();
 void makeMultiplyGraphicMode();
 void convertLettersToNumbers();
+void convertLettersToNumbersWithDecimals();
+void moveDotEntireScreen();
+void automaticCashDispense();
 
 void mainMenuHandler(int option) {
     switch (option) {
@@ -37,6 +40,9 @@ void mainMenuHandler(int option) {
         case 6:
             convertLettersToNumbers();
             break;
+        case 7:
+            convertLettersToNumbersWithDecimals();
+            break;
         case 8:
             multiplyTableGenerator();
             break;
@@ -54,6 +60,12 @@ void mainMenuHandler(int option) {
             break;
         case 13:
             makeFigure();
+            break;
+        case 14:
+            moveDotEntireScreen();
+            break;
+        case 15:
+            automaticCashDispense();
             break;
         case 16:
             hypotenuseCalculator();

@@ -1,6 +1,19 @@
 #include <iostream>
 #include <cmath>
+#include <sstream>
 using namespace std;
+
+template <typename T>
+string parseToString(T n) {
+    ostringstream oOStrStream;
+    oOStrStream << n;
+    return oOStrStream.str();
+}
+
+float MRound(float var);
+int parseInt(char x);
+int toInt(string str);
+
 
 string calculateUnits(int n);
 string calculateDozens(int n);
@@ -11,7 +24,9 @@ string calculateSubUnits(int n);
 string calcMillionsPlaceholder(int n, int divide, string singularPlaceholder, string pluralPlaceholder);
 string calculateSubDozens(string txt, int n);
 
+
 void calculateAmount(int n);
+void calculateAmountWithDecimals(double n);
 
 void convertLettersToNumbers() {
     int n;
@@ -30,6 +45,23 @@ void convertLettersToNumbers() {
     calculateAmount(n);
 }
 
+void convertLettersToNumbersWithDecimals() {
+    double n;
+
+    cout<<"Ingrear un numero: ";
+    cin>>n;
+
+    if (cin.fail()) {
+        cout<<"El sistema no soporta caracteres especiales. Por favor ingresa un numero."<<endl;
+        cin.clear();
+        cin.ignore(INT_MAX, '\n');
+        cout<<"Ingresa un numero: ";
+        cin>>n;
+    }
+
+    calculateAmountWithDecimals(n);
+}
+
 void calculateAmount(int n) {
     string amount;
 
@@ -42,6 +74,35 @@ void calculateAmount(int n) {
     }
 
     cout<<amount<<endl;
+}
+
+void calculateAmountWithDecimals(double n) {
+    string amountTxt = parseToString(MRound(n));
+    string helper;
+
+    if (amountTxt[amountTxt.length() - 2] == '.') {
+        helper += amountTxt[amountTxt.length() - 1];
+        helper += "0";
+    } else {
+        helper += amountTxt[amountTxt.length() - 2];
+        helper += amountTxt[amountTxt.length() - 1];
+    }
+
+    string amount;
+
+    if (n <= 999) {
+        amount = calculateHundreds(trunc(n));
+    } else if (n >= 1000 && n <= 999999) {
+        amount = calculateThousands(n);
+    } else if (n >= 1000000) {
+        amount = calculateMillions(trunc(n));
+    }
+
+    if (amountTxt[amountTxt.length() - 3] != '.') {
+        cout<<amount<<endl;
+    } else {
+        cout<<amount<<" PUNTO "<<calculateDozens(toInt(helper))<<endl;
+    }
 }
 
 
@@ -273,9 +334,15 @@ string calculateSubUnits(int n) {
 string calculateSubDozens(string txt, int n) {
     string letter;
 
-    letter += txt;
-    letter += " Y ";
-    letter += calculateUnits(n);
+    if (n != 0) {
+        letter += txt;
+        letter += " Y ";
+        letter += calculateUnits(n);
+    } else {
+        letter += txt;
+        letter += " ";
+        letter += calculateUnits(n);
+    }
 
     return  letter;
 }
